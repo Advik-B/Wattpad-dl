@@ -34,6 +34,7 @@ class WattpadStory(Resource):
 
 api.add_resource(WattpadStory, "/story/<int:story_id>")
 
+
 @app.route("/")
 def index():
     return render_template("index.j2")
