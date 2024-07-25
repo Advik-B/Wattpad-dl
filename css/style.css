@@ -33,3 +33,22 @@
 .cover h1 {
   @apply text-5xl font-bold text-amber-200 m-4;
 }
+
+/*
+|       |
+| image | Author Name
+|       |
+*/
+
+.author {
+  @apply flex flex-row items-center m-4 border-2 border-amber-200 rounded-lg;
+}
+
+.author img {
+  @apply h-1/3 w-1/3 rounded-lg;
+}
+
+.author h2 {
+  @apply text-4xl text-amber-200 m-4;
+}
+
