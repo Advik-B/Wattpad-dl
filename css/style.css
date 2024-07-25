@@ -75,7 +75,7 @@
 }
 
 .chip {
-  @apply bg-amber-200 text-black rounded-3xl p-2 m-2;
+  @apply italic font-semibold bg-amber-200 text-black rounded-3xl p-2 m-2;
 }
 
 .chips {
