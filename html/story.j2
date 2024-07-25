@@ -4,11 +4,18 @@
 
 {% block content %}
     <div class="story">
-        <a href="{{ story.url }}"><h1>{{ story.title }}</h1></a>
-        {# Render the story image #}
-        {% if story.cover %}
+        <div class="cover">
+            {% if story.cover %}
+            {# Render the story image #}
             <img src="{{ story.cover }}" alt="{{ story.title }}">
-        {% endif %}
+            {% endif %}
+            <div>
+            <a href="{{ story.url }}"><h1>{{ story.title }}</h1></a>
+            {# Render the story author #}
+            {% include "widgets/author.j2" %}
+            </div>
+        </div>
+{#        <hr>#}
         {# Render the tags #}
         <div class="chips">
         {% for tag in story.tags %}
@@ -16,15 +23,15 @@
         {% endfor %}
         </div>
         {# Render the story description #}
+        <div class="description">
         {# split story.description at each newline character #}
         {% for paragraph in story.description.split('\n') %}
             {% if paragraph.strip() != "" %}
                 <p>{{ paragraph }}</p>
             {% endif %}
         {% endfor %}
+        </div>
     </div>
-    {# Render the story author #}
-    {% include "widgets/author.j2" %}
     {# Line Break #}
     <hr>
     {# Render the story comments #}
