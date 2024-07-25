@@ -15,7 +15,7 @@
 {% block content %}
     <h1>Wattpad Downloader</h1>
     <p>Download your favorite stories from Wattpad!</p>
-    <form action="/download" method="post">
+    <form action="/api/story" method="get">
         <div class="form-group">
             <label for="url">URL</label>
             <input type="text" class="form-control" id="url" name="url" placeholder="Enter the URL of the story" required>
