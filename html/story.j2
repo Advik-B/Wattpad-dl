@@ -12,7 +12,7 @@
         {# Render the tags #}
         <div class="chips">
         {% for tag in story.tags %}
-            <span class="chip">{{ tag }}</span>
+            <a class="chip" href="https://www.wattpad.com/stories/{{ tag }}">#{{ tag }}</a>
         {% endfor %}
         </div>
         {# Render the story description #}
