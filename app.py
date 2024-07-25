@@ -72,6 +72,7 @@ def index():
 @app.route("/story/<story_id>")
 def story(story_id):
     story = Story.from_id(story_id, engine)
+    # print(story.description)
     return render_template(
         "story.j2",
         story=story,
