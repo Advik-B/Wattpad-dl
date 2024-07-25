@@ -68,6 +68,7 @@ api.add_resource(WattpadStory, "/story")
 @app.route("/")
 def index():
     return render_template("index.j2")
+
 @app.route("/story/<story_id>")
 def story(story_id):
     story = Story.from_id(story_id, engine)
