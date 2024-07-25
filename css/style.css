@@ -48,6 +48,7 @@
   ;
 }
 
+
 .author :hover p {
   @apply
     text-blue-500
@@ -59,9 +60,16 @@
 }
 
 .story {
-  @apply text-2xl font-bold text-white flex flex-col items-center;
+  @apply text-2xl text-white flex flex-col items-center;
+}
+
+.story img {
+  @apply w-1/4 h-1/4 rounded-3xl m-4;
 }
 
 .story h1 {
   @apply text-5xl font-bold text-amber-200 m-4;
+}
+.story p {
+  @apply text-2xl m-4;
 }
