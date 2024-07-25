@@ -26,8 +26,12 @@
   /* Single line */
     @apply flex flex-row;
 }
-.cover #cover {
-  @apply h-1/4 w-1/4 p-4 rounded-3xl align-middle float-left;
+#cover {
+  @apply h-fit w-fit rounded-3xl align-middle float-left;
+}
+
+#cover-image {
+  @apply rounded-3xl p-4;
 }
 
 .cover h1 {
