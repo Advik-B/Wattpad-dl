@@ -52,7 +52,6 @@ class WattpadStory(Resource):
 
         return jsonify(story)
 
-
 api.add_resource(WattpadStory, "/story")
 
 
