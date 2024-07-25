@@ -57,3 +57,11 @@
     duration-300
   ;
 }
+
+.story {
+  @apply text-2xl font-bold text-white flex flex-col items-center;
+}
+
+.story h1 {
+  @apply text-5xl font-bold text-amber-200 m-4;
+}
