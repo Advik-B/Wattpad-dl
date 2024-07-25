@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.author {
+  @apply text-4xl font-bold text-gray-800 flex border-amber-300;
+}
+
+.author img {
+  @apply inline-block w-20 h-20 rounded-3xl;
+}
+
+.author p {
+  @apply text-gray-600 mt-2 inline-flex;
+}
+
+.author :hover {
+  @apply text-blue-500 cursor-pointer;
+}
