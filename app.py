@@ -74,5 +74,4 @@ def story(story_id):
     return render_template(
         "story.j2",
         story=story,
-        author=render_template("author.j2", story=story),
     )
