@@ -21,7 +21,9 @@ else:
 
 
 class WattpadStory(Resource):
-    def get(self, url: str):
+    def get(self):
+        # Get the url from the request
+        url = request.args.get("url")
         # Check if the url is a story url
         current_mode = None
         story_match = wattpad_story_regex.match(url)
@@ -36,16 +38,23 @@ class WattpadStory(Resource):
         else:
             return jsonify({"error": "Invalid URL"}), 400
 
+        print(f"Current mode: {current_mode}")
+
         if current_mode == WattpadMode.STORY:
             story = Story.from_id(id, engine)
         else:
-            story = Story.from_partid(id, engine)
+            json_data = engine.fetch(
+                f"v4/parts/{id}",
+                query={"fields":"text_url,group(id,title,description,isPaywalled,url,cover,author(name,username,avatar),lastPublishedPart,parts(id,title,text_url),tags)"}
+            )
+            story = Story.from_json_part(json_data)
+
 
         return jsonify(story)
 
 
+api.add_resource(WattpadStory, "/story")
 
-api.add_resource(WattpadStory, "/story/<int:story_id>")
 
 # Story url
 # https://www.wattpad.com/story/336166598-wounded-love-%E2%9C%85%EF%B8%8F
@@ -54,6 +63,7 @@ api.add_resource(WattpadStory, "/story/<int:story_id>")
 # https://www.wattpad.com/1322118318-wounded-love-%E2%9C%85%EF%B8%8F-aesthetics
 
 # Notice that the story url is always /story/<story_id>-<story_name>
+# Story id is always
 # The part url is always /<part_id>-<part_name>
 
 @app.route("/")
