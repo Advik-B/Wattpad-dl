@@ -12,15 +12,15 @@
 
 .author div {
   @apply border-2
-    border-amber-300 rounded-3xl p-4 m-4;
+    border-amber-300 rounded-3xl p-4;
 }
 
 .author img {
-  @apply inline-block w-20 h-20 rounded-3xl;
+  @apply inline-flex w-20 h-20 rounded-3xl;
 }
 
 .author p {
-  @apply text-amber-200 m-3 inline-flex text-3xl;
+  @apply text-amber-200 inline-flex text-3xl;
 }
 
 .author :hover {
@@ -60,18 +60,7 @@
 }
 
 .story {
-  @apply text-2xl text-white flex flex-col items-center;
-}
-
-.story img {
-  @apply w-1/5 h-1/5 rounded-3xl m-4;
-}
-
-.story h1 {
-  @apply text-5xl font-bold text-amber-200 m-4;
-}
-.story p {
-  @apply text-2xl m-4;
+  @apply m-4;
 }
 
 .chip {
@@ -80,4 +69,25 @@
 
 .chips {
   @apply flex flex-wrap justify-center;
+}
+
+.description {
+  @apply text-2xl text-white flex flex-col items-center m-4;
+}
+
+.cover {
+  /* Single line */
+    @apply flex flex-row;
+}
+
+.inline {
+  @apply float-left;
+}
+
+.cover img {
+  @apply h-1/4 w-1/4 p-4 rounded-3xl align-middle float-left;
+}
+
+.cover h1 {
+  @apply text-5xl font-bold text-amber-200 m-4;
 }
