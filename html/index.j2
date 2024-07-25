@@ -3,10 +3,23 @@
 {% block title %}Home{% endblock %}
 {% block head %}
     {{ super() }}
-    <script src="static/index.js"></script>
+    <script>
+        function onReady() {
+            console.log('Hello from JavaScript!');
+        }
+
+        $(document).ready(onReady);
+    </script>
 {% endblock %}
 
 {% block content %}
-    <h1>Home</h1>
-    <p>Welcome to the home page!</p>
+    <h1>Wattpad Downloader</h1>
+    <p>Download your favorite stories from Wattpad!</p>
+    <form action="/download" method="post">
+        <div class="form-group">
+            <label for="url">URL</label>
+            <input type="text" class="form-control" id="url" name="url" placeholder="Enter the URL of the story" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Download</button>
+    </form>
 {% endblock %}
