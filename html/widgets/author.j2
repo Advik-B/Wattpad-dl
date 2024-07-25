@@ -1,2 +1,6 @@
-<img src="{{ story.author.avatar }}" alt="Author avatar">
-<p>{{ story.author.name }}</p>
+<a class="author" href="https://www.wattpad.com/user/{{ story.author.username }}">
+    <div>
+        <img src="{{ story.author.avatar }}" alt="Author avatar">
+        <p>{{ story.author.name }}</p>
+    </div>
+</a>
