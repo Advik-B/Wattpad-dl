@@ -6,59 +6,6 @@
   @apply font-sans text-base bg-slate-800 text-white;
 }
 
-.author {
-  @apply text-4xl font-bold text-white flex flex-col items-center;
-}
-
-.author div {
-  @apply border-2
-    border-amber-300 rounded-3xl p-4;
-}
-
-.author img {
-  @apply inline-flex w-20 h-20 rounded-3xl;
-}
-
-.author p {
-  @apply text-amber-200 inline-flex text-3xl;
-}
-
-.author :hover {
-  @apply
-    /*text-blue-500*/
-    cursor-pointer
-    border-blue-500
-    transform
-    scale-110
-    rounded-2xl
-    transition
-    transition-all
-    duration-300
-  ;
-}
-
-.author :hover img {
-  @apply
-    rounded-2xl
-    transform
-    scale-110
-    transition
-    transition-all
-    duration-300
-  ;
-}
-
-
-.author :hover p {
-  @apply
-    text-blue-500
-    transform-none
-    transition
-    transition-all
-    duration-300
-  ;
-}
-
 .story {
   @apply m-4;
 }
@@ -90,4 +37,16 @@
 
 .cover h1 {
   @apply text-5xl font-bold text-amber-200 m-4;
+}
+
+.author {
+    @apply text-2xl ;
+}
+
+.author img {
+  @apply h-1/4 w-1/4 rounded-3xl align-middle float-left;
+}
+
+.author h2 {
+  @apply text-3xl font-bold text-amber-200;
 }
