@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  @apply font-sans text-base bg-slate-800 text-white;
+  @apply font-sans text-base text-white bg-[#141414];
 }
 
 .story {
@@ -26,12 +26,7 @@
   /* Single line */
     @apply flex flex-row;
 }
-
-.inline {
-  @apply float-left;
-}
-
-.cover img {
+.cover #cover {
   @apply h-1/4 w-1/4 p-4 rounded-3xl align-middle float-left;
 }
 
@@ -40,13 +35,13 @@
 }
 
 .author {
-    @apply text-2xl ;
+    @apply border-amber-300 border-2 rounded-3xl;
 }
 
 .author img {
-  @apply h-1/4 w-1/4 rounded-3xl align-middle float-left;
+  @apply h-1/4 w-1/4 p-4 rounded-3xl float-left m-0;
 }
 
 .author h2 {
-  @apply text-3xl font-bold text-amber-200;
+  @apply text-3xl font-bold text-amber-200 m-10;
 }
