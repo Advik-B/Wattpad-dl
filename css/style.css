@@ -64,7 +64,7 @@
 }
 
 .story img {
-  @apply w-1/4 h-1/4 rounded-3xl m-4;
+  @apply w-1/5 h-1/5 rounded-3xl m-4;
 }
 
 .story h1 {
@@ -72,4 +72,12 @@
 }
 .story p {
   @apply text-2xl m-4;
+}
+
+.chip {
+  @apply bg-amber-200 text-black rounded-3xl p-2 m-2;
+}
+
+.chips {
+  @apply flex flex-wrap justify-center;
 }
