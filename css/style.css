@@ -33,15 +33,3 @@
 .cover h1 {
   @apply text-5xl font-bold text-amber-200 m-4;
 }
-
-.author {
-    @apply border-amber-300 border-2 rounded-3xl;
-}
-
-.author img {
-  @apply h-1/4 w-1/4 p-4 rounded-3xl float-left m-0;
-}
-
-.author h2 {
-  @apply text-3xl font-bold text-amber-200 m-10;
-}
