@@ -7,12 +7,12 @@
 }
 
 .author {
-  @apply text-4xl font-bold text-white flex;
+  @apply text-4xl font-bold text-white flex flex-col items-center;
 }
 
 .author div {
   @apply border-2
-    border-amber-300 rounded-3xl p-4;
+    border-amber-300 rounded-3xl p-4 m-4;
 }
 
 .author img {
@@ -20,14 +20,38 @@
 }
 
 .author p {
-  @apply text-amber-200 mt-2 inline-flex text-3xl;
+  @apply text-amber-200 m-3 inline-flex text-3xl;
 }
 
 .author :hover {
   @apply
-    text-blue-500
+    /*text-blue-500*/
     cursor-pointer
     border-blue-500
+    transform
+    scale-110
+    rounded-2xl
+    transition
+    transition-all
+    duration-300
+  ;
+}
+
+.author :hover img {
+  @apply
+    rounded-2xl
+    transform
+    scale-110
+    transition
+    transition-all
+    duration-300
+  ;
+}
+
+.author :hover p {
+  @apply
+    text-blue-500
+    transform-none
     transition
     transition-all
     duration-300
