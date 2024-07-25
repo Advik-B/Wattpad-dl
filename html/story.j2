@@ -9,6 +9,12 @@
         {% if story.cover %}
             <img src="{{ story.cover }}" alt="{{ story.title }}">
         {% endif %}
+        {# Render the tags #}
+        <div class="chips">
+        {% for tag in story.tags %}
+            <span class="chip">#{{ tag }}</span>
+        {% endfor %}
+        </div>
         {# Render the story description #}
         {# split story.description at each newline character #}
         {% for paragraph in story.description.split('\n') %}
@@ -19,5 +25,13 @@
     </div>
     {# Render the story author #}
     {% include "widgets/author.j2" %}
-
+    {# Line Break #}
+    <hr>
+    {# Render the story parts #}
+    <div class="parts">
+    {% for part in story.parts %}
+        <a href="{{ part.text_url }}"><p>{{ part.title }}</p></a>
+    {% endfor %}
+    </div>
+    {# Render the story comments #}
 {% endblock %}
