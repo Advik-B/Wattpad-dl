@@ -12,7 +12,7 @@
         {# Render the tags #}
         <div class="chips">
         {% for tag in story.tags %}
-            <span class="chip">#{{ tag }}</span>
+            <span class="chip">{{ tag }}</span>
         {% endfor %}
         </div>
         {# Render the story description #}
@@ -27,11 +27,5 @@
     {% include "widgets/author.j2" %}
     {# Line Break #}
     <hr>
-    {# Render the story parts #}
-    <div class="parts">
-    {% for part in story.parts %}
-        <a href="{{ part.text_url }}"><p>{{ part.title }}</p></a>
-    {% endfor %}
-    </div>
     {# Render the story comments #}
 {% endblock %}
