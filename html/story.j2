@@ -51,12 +51,8 @@
 {% block scripts %}
     <script>
         // Add a click event listener to the download button
-        $('#dl-cntr').on('click', '*', function() {
-            // Send a POST request to the server to download the story
-            $.post('/download', {url: '{{ story.url }}'}, function(data) {
-                // Redirect the user to the download page
-                {#window.location.href = data.url;#}
-            });
+        $('#dl-cntr').on("mouseenter",() => {
+            console.log('Download button hovered');
         });
     </script>
 {% endblock %}
