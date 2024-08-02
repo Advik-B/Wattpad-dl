@@ -2,6 +2,7 @@
 
 {% block title %}{{ story.title }}{% endblock %}
 
+
 {% block content %}
     <div class="story">
         <div class="cover">
@@ -19,6 +20,9 @@
                     <img src="{{ story.author.avatar }}" alt="Author avatar">
                     <p>{{ story.author.name }}</p>
                 </a>
+            </div>
+            <div class="download-container" id="dl-cntr">
+                <button>Download PDF</button>
             </div>
             </div>
         </div>
@@ -42,4 +46,17 @@
     {# Line Break #}
     <hr>
     {# Render the story comments #}
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        // Add a click event listener to the download button
+        $('#dl-cntr').on('click', '*', function() {
+            // Send a POST request to the server to download the story
+            $.post('/download', {url: '{{ story.url }}'}, function(data) {
+                // Redirect the user to the download page
+                {#window.location.href = data.url;#}
+            });
+        });
+    </script>
 {% endblock %}
