@@ -14,7 +14,10 @@
             <div>
             <h1>{{ story.title }}</h1>
             {# Render the story author #}
-            {% include "widgets/author.j2" %}
+            <a class="author" href="https://www.wattpad.com/user/{{ story.author.username }}">
+                <img src="{{ story.author.avatar }}" alt="Author avatar">
+                <h2>{{ story.author.name }}</h2>
+            </a>
             </div>
         </div>
 {#        <hr>#}
