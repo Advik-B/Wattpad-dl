@@ -51,3 +51,11 @@
 .author p {
     @apply text-2xl text-white inline-block m-4 align-middle;
 }
+
+.download-container {
+    @apply flex h-20 justify-center m-4 border-2 border-amber-200 mt-2 mb-2 rounded-full;
+}
+
+.download-container button {
+    @apply bg-amber-200 text-black w-full m-1 rounded-full text-4xl font-bold;
+}
