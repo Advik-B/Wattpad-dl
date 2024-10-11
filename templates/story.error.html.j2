@@ -1,0 +1,13 @@
+{% block content %}
+    <div class="error">
+        <h1 class="error-title">Something went wrong</h1>
+        {% if error["error_code"] == 1017 %}
+            <p class="error-desc">Story not found with ID {{story_id}}</p>
+        {% else %}
+            <p class="error-desc">Unknown error occurred</p>
+            <div class="code-container">
+                <code class="code">{{error}}</code>
+            </div>
+        {% endif %}
+    </div>
+{% endblock content %}
