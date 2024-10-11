@@ -1,5 +1,0 @@
-flask
-diskcache
-wattpad-api
-flask-restful
-gunicorn
