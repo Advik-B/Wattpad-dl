@@ -4,7 +4,17 @@
 {# Renders story.error.html.j2 instead of this file #}
 {% include "story.error.html.j2" %}
 
-{% else %}
-{# Renders this file #}
-<p>No Error</p>
+{% elif err == False %}
+
+{% block content %}
+<div class="story">
+    <h1 class="story-title">{{story.title}}</h1>
+    <a href="{{story.url}}" class="story-url"><img src="{{story.cover}}"></a>
+    <a class="author" href="https://www.wattpad.com/user/{{story.author.username}}">
+        <span>{{story.author.name}}</span>
+        <img src="{{story.author.avatar}}"> 
+    </a>        
+</div>
+{% endblock  %}
+
 {% endif %}
