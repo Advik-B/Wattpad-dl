@@ -1,0 +1,4 @@
+sanic[ext]
+jinja2
+sentry-sdk[sanic]
+wattpad-api
