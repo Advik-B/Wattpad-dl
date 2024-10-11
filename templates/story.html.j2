@@ -1,0 +1,11 @@
+{% extends "base.html.j2" %}
+
+{% if error %}
+{# Renders story.error.html.j2 instead of this file #}
+{% block title %}Error{% endblock %}
+{% include "story.error.html.j2" %}
+
+{% else %}
+{# Renders this file #}
+<p>No Error</p>
+{% endif %}
