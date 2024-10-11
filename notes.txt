@@ -1,0 +1,1 @@
+WeazyPrint for PDF generation
