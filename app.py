@@ -25,5 +25,9 @@ async def story(request: Request, story_id: int):
         story = Story.from_id(story_id, wattpad)
     except APIerror as e:
         # Render story.error.html.j2 instead
-        return {"error": json.loads(str(e).replace('\'', '"')), "story_id": story_id}
-    return {"story": story}
+        return {
+            "err": True,
+            "error": json.loads(str(e).replace('\'', '"')),
+            "story_id": story_id
+        }
+    return {"story": story, "err":False}
